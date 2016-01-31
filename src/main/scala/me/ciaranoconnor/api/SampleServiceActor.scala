@@ -28,7 +28,7 @@ class SampleServiceActor extends HttpServiceActor with ActorLogging {
   val swaggerService = new SwaggerHttpService {
     override def apiTypes = Seq(typeOf[UserHttpService])
     override def apiVersion = "1.0"
-    override def baseUrl = Config.HttpConfig.host+":"+Config.HttpConfig.port
+    override def baseUrl = "/"
     override def docsPath = "api-docs"
     override def actorRefFactory = context
     override def apiInfo = Some(new ApiInfo("Spray-Swagger Sample", "A sample spray.io project", "TOC Url", "", "Apache V2", "http://www.apache.org/licenses/LICENSE-2.0"))

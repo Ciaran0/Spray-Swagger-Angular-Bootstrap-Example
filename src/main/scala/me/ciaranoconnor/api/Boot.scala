@@ -16,4 +16,5 @@ object Boot extends App {
 
   implicit val timeout = Timeout(5.seconds)
   IO(Http) ? Http.Bind(service, interface = Config.HttpConfig.host, port = Config.HttpConfig.port)
+  Console.println("Server started")
 }
