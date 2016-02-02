@@ -22,7 +22,10 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-actor"      % akkaV,
     "com.gettyimages" %% "spray-swagger" % "0.5.1",
     "org.slf4j" % "slf4j-api" % "1.7.7",
-    "ch.qos.logback"  %  "logback-classic"   % "1.1.3"
+    "ch.qos.logback"  %  "logback-classic"   % "1.1.3",
+    "org.scalatest" %% "scalatest" % "2.2.6" % "test",
+    "org.scalactic" %% "scalactic" % "2.2.6"
+
   )
 }
 

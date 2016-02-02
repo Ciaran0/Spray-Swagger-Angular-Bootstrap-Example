@@ -8,6 +8,6 @@ Goto:
 http://localhost:8080/  
 http://localhost:8080/swagger
 
-The frontend uses NPM, Bower and Gulp.
+The frontend uses NPM, Bower and Gulp.  
 To install the bower components run *bower install*.  
 Similarliy for the NPM dependencies *npm install*
