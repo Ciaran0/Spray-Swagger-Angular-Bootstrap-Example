@@ -1,4 +1,5 @@
-#Spray Swagger Angular Bootstrap Example
+#Spray Swagger Angular Bootstrap Example  
+[![Build Status](https://travis-ci.org/Ciaran0/Spray-Swagger-Angular-Bootstrap-Example.svg?branch=master)](https://travis-ci.org/Ciaran0/Spray-Swagger-Angular-Bootstrap-Example)
 
 This project aims to be a template for Spray.io rest backends with Angular frontend. Also with swagger integration.
 
