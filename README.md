@@ -4,11 +4,12 @@
 This project aims to be a template for Spray.io rest backends with Angular frontend. Also with swagger integration.
 
 To run: sbt "project sprayplayground" run  
+To test: sbt "project sprayplayground" test  
 
 Goto:  
 http://localhost:8080/  
 http://localhost:8080/swagger
 
 The frontend uses NPM, Bower and Gulp.  
-To install the bower components run *bower install*.  
+To install the bower components run *bower install*  
 Similarliy for the NPM dependencies *npm install*
