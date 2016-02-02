@@ -23,6 +23,11 @@ class SampleServiceActor extends HttpServiceActor with ActorLogging {
         }
       } ~
         getFromResourceDirectory("swagger")
+      pathPrefix("") { pathEndOrSingleSlash {
+        getFromResource("app/index.html")
+      }
+      } ~
+        getFromResourceDirectory("app")
     })
 
   val swaggerService = new SwaggerHttpService {
