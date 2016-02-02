@@ -1,5 +1,13 @@
 #Spray Swagger Angular Bootstrap Example
 
-To run: sbt "project sprayplayground" run
+This project aims to be a template for Spray.io rest backends with Angular frontend. Also with swagger integration.
 
-TODO: Frontend
+To run: sbt "project sprayplayground" run  
+
+Goto:  
+http://localhost:8080/  
+http://localhost:8080/swagger
+
+The frontend uses NPM, Bower and Gulp.
+To install the bower components run *bower install*.  
+Similarliy for the NPM dependencies *npm install*
