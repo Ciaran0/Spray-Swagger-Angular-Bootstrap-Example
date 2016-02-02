@@ -16,19 +16,23 @@ class SampleServiceActor extends HttpServiceActor with ActorLogging {
     def actorRefFactory = context
   }
 
-  def receive = runRoute(users.routes ~ swaggerService ~
+  def appRoute = {
+    pathPrefix("") { pathEndOrSingleSlash {
+      getFromResource("app/index.html")
+    }
+    } ~
+      getFromResourceDirectory("app")
+  }
+
+  def receive = runRoute(users.routes ~ swaggerService ~ appRoute ~
     get {
       pathPrefix("swagger") { pathEndOrSingleSlash {
         getFromResource("swagger/index.html")
         }
       } ~
         getFromResourceDirectory("swagger")
-      pathPrefix("") { pathEndOrSingleSlash {
-        getFromResource("app/index.html")
-      }
-      } ~
-        getFromResourceDirectory("app")
     })
+
 
   val swaggerService = new SwaggerHttpService {
     override def apiTypes = Seq(typeOf[UserHttpService])

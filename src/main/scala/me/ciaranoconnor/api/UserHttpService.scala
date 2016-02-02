@@ -2,15 +2,19 @@ package me.ciaranoconnor.api
 
 import com.wordnik.swagger.annotations._
 import me.ciaranoconnor.models.User
+import org.slf4j.LoggerFactory
+import spray.http.StatusCodes
+import spray.httpx.SprayJsonSupport
 import spray.routing.HttpService
 
 @Api(value = "/User", description = "Operations about Users.", produces = "application/json", position = 0)
-trait UserHttpService extends HttpService {
+trait UserHttpService extends HttpService with SprayJsonSupport {
   import User._
   import spray.http.MediaTypes
-  import spray.httpx.SprayJsonSupport._
 
   val routes = getUsers ~ getUser ~ addUser
+  val log = LoggerFactory.getLogger(classOf[UserHttpService])
+
 
   @ApiOperation(value = "Get all users", notes = "Returns all users", nickname = "getUsers", httpMethod = "GET", response = classOf[User], responseContainer = "List")
   @ApiImplicitParams(Array())
@@ -22,7 +26,17 @@ trait UserHttpService extends HttpService {
     path("User") {
       respondWithMediaType(MediaTypes.`application/json`) {
         get {
-          complete(List(User(1, "Tom"),User(2,"bob")))
+          pathEnd {
+            complete {
+              //In a real application retrievedUsers would be retrieved from a database
+              val retrievedUsers  = List(User(1, "Tom"),User(2,"bob"))
+              log.debug("Getting users")
+              retrievedUsers match {
+                case head::tail => retrievedUsers
+                case Nil => StatusCodes.NoContent
+              }
+            }
+          }
         }
       }
     }
