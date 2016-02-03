@@ -4,7 +4,8 @@
 This project aims to be a template for Spray.io rest backends with Angular frontend. Also with swagger integration.
 
 To run: sbt "~ re-start"  
-The project will automatically reload when source code changes.  
+The project will automatically reload when source code changes. 
+To run with kamon: aspectj-runner:run  
 To test: sbt "project sprayplayground" test  
 
 Goto:  

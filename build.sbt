@@ -24,7 +24,10 @@ libraryDependencies ++= {
     "org.slf4j" % "slf4j-api" % "1.7.7",
     "ch.qos.logback"  %  "logback-classic"   % "1.1.3",
     "org.scalatest" %% "scalatest" % "2.2.6" % "test",
-    "org.scalactic" %% "scalactic" % "2.2.6"
+    "org.scalactic" %% "scalactic" % "2.2.6",
+    "io.kamon" %% "kamon-spray" % "0.5.2",
+    "io.kamon" %% "kamon-core" % "0.5.2",
+    "io.kamon" % "kamon-statsd_2.11" % "0.5.2"
   )
 }
 
