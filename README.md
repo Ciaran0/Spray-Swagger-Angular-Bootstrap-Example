@@ -3,7 +3,8 @@
 
 This project aims to be a template for Spray.io rest backends with Angular frontend. Also with swagger integration.
 
-To run: sbt "project sprayplayground" run  
+To run: sbt "~ re-start"  
+The project will automatically reload when source code changes.  
 To test: sbt "project sprayplayground" test  
 
 Goto:  

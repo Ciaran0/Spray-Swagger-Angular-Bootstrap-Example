@@ -20,7 +20,7 @@ trait UserHttpService extends HttpService with SprayJsonSupport {
   @ApiImplicitParams(Array())
   @ApiResponses(Array(
     new ApiResponse(code = 200, message = "User retrieved"),
-    new ApiResponse(code = 204, message = "No content")
+    new ApiResponse(code = 204, message = "No user found")
   ))
   def getUsers = {
     path("User") {

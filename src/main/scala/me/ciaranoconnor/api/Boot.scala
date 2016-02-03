@@ -4,14 +4,11 @@ import akka.actor.{ActorLogging, ActorSystem, Props}
 import akka.io.IO
 import akka.pattern.ask
 import akka.util.Timeout
-import kamon.Kamon
 import spray.can.Http
 
 import scala.concurrent.duration._
 
 object Boot extends App {
-
-  Kamon.start()
 
   implicit val system = ActorSystem("on-spray-can")
 

@@ -1,11 +1,8 @@
 package me.ciaranoconnor.models
 
-import com.wordnik.swagger.annotations.{ApiModelProperty, ApiModel}
-import spray.httpx.SprayJsonSupport
-import spray.json._
-import spray.json.RootJsonFormat
-import spray.json.DefaultJsonProtocol._
+import com.wordnik.swagger.annotations.{ApiModel, ApiModelProperty}
 
+import spray.json._
 import scala.annotation.meta.field
 
 @ApiModel(description = "A user object")
